@@ -75,21 +75,27 @@ body {
 			$number_of_comments = $title_results3->item($i)->nodeValue;
 			echo "<font color=\"0099CC\">จำนวนความคิดเห็น = $number_of_comments<br>";
             
+            //////////////ให้เขียน Xpath results4//////////////
             //$title_results4
-			$number_of_likes = $title_results4->item($i)->nodeValue;
+/*1)*/      
 			echo "<font color=\"006400\">จำนวน Like = $number_of_likes<br>";
+            //////////////---------------///////////////////
             
+            //-------------------------------------------------------------//
+          
+            //////////////ให้เขียน Xpath results5//////////////
             //$title_results5
-			$tags = $title_results5->item($i)->nodeValue;
+/*2)*/		
 			echo "<font color=\"CC6600\">Tag ข้อมูล = $tags<br>";
-			
+			//////////////---------------///////////////////
 
 		echo "<font color=\"000000\">##-------------------------------------------------------------------------------------------------------------------------------------------------------------##<br>";
             //Check NodeType
             echo "<h2>---Check NodeType---</h2>";
-            echo "<i>จำนวน NodeValue ของ >'$'title_results< = </i>".$title_results->item($i-1)->nodeValue; echo "<br>";
-            echo "<i>จำนวน NodeType ของ >'$'title_results< = </i>".$title_results->item($i-1)->nodeType; echo "<br>";
-            echo "<br>";
+            echo "<i>จำนวน NodeValue ของ >'$'title_results< = </i>".$title_results->item($i-1)->nodeValue; echo "<pre>";
+            echo "<i>จำนวน NodeType ของ >'$'title_results< = </i>".$title_results->item($i-1)->nodeType; echo "<pre>";
+            var_dump ($title_results->item($i-1)); echo "<be>";
+            echo "<pre>";
             echo "<################################################################################><br>";
 		}
             
