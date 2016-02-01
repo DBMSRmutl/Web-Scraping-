@@ -24,7 +24,7 @@ body {
 	$dom->loadHTML($html);
 	$xpathProcessor = new DOMXPath($dom);
 	
-	
+	//Xpath
 		$xpathQueryString = "//div[@class='post-item-title']/a/text()";
 		$title_results = $xpathProcessor->query($xpathQueryString);
 		
@@ -40,12 +40,8 @@ body {
 		$xpathQueryString = "//div[@class='post-item-by']/div/@title";
 		$title_results3 = $xpathProcessor->query($xpathQueryString);
 
-		$xpathQueryString = "//div[@class='post-item-by']/div[2]/@title";
-		$title_results4 = $xpathProcessor->query($xpathQueryString);
-    
-		$xpathQueryString = "//div[@class='post-item-footer']/div";
-		$title_results5 = $xpathProcessor->query($xpathQueryString);
-
+		
+	//print
             //echo "<br> #ofResult_length =".$title_results->length."<br>";
     
 		//$count=$title_results->length;
@@ -56,8 +52,8 @@ body {
 			echo "<font color=\"993300\">กระทู้ที่ : $i<br>";
             
             //$title_results
-            $title1 = $title_results->item($i-1)->nodeValue;
-            echo "<font color=\"FF0000\">ชื่อกระทู้ = $title1<br>";
+            		$title1 = $title_results->item($i-1)->nodeValue;
+            		echo "<font color=\"FF0000\">ชื่อกระทู้ = $title1<br>";
             
             //$title_link_results
 			$link = $title_link_results->item($i)->nodeValue;
