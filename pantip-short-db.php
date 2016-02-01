@@ -34,26 +34,28 @@ body {
 		
 		$xpathQueryString = "//span[@class='by-name']/text()";
 		$title_results1 = $xpathProcessor->query($xpathQueryString);
-
+    
 		$xpathQueryString = "//span[@class='timestamp']/abbr/@data-utime";
 		$title_results2 = $xpathProcessor->query($xpathQueryString);
-
+    
 		$xpathQueryString = "//div[@class='post-item-by']/div/@title";
 		$title_results3 = $xpathProcessor->query($xpathQueryString);
 		
 	//////////////ให้เขียน xpath results4//////////////
-            //$title_results4
-/*1)*/      
-			
-            //////////////---------------///////////////////
+        //$title_results4
+/*1)*/  
+        
+    	
+    //////////////---------------///////////////////
             
-            //-------------------------------------------------------------//
+    //-------------------------------------------------------------//
           
-            //////////////ให้เขียน xpath results5//////////////
-            //$title_results5
-/*2)*/		
+    //////////////ให้เขียน xpath results5//////////////
+        //$title_results5
+/*2)*/	
+        
 			
-			//////////////---------------///////////////////
+    //////////////---------------///////////////////
 		
 	//print
             //echo "<br> #ofResult_length =".$title_results->length."<br>";
@@ -66,13 +68,12 @@ body {
 			echo "<font color=\"993300\">กระทู้ที่ : $i<br>";
             
         	//$title_results
-            		$title1 = $title_results->item($i-1)->nodeValue;
-            		echo "<font color=\"FF0000\">ชื่อกระทู้ = $title1<br>";
+            $title1 = $title_results->item($i-1)->nodeValue;
+            echo "<font color=\"FF0000\">ชื่อกระทู้ = $title1<br>";
             
         	//$title_link_results
 			$link = $title_link_results->item($i)->nodeValue;
 			echo "<font color=\"3366FF\">ลิงค์ = $link<br>";
-
         	//$title_results1
 			$post_by = $title_results1->item($i)->nodeValue;
 			echo "<font color=\"9400D3\">ชื่อผู้โพส = $post_by<br>";
@@ -98,7 +99,6 @@ body {
 /*2)*/		
 			echo "<font color=\"CC6600\">Tag ข้อมูล = $tags<br>";
 			//////////////---------------///////////////////
-
 		echo "<font color=\"000000\">##-------------------------------------------------------------------------------------------------------------------------------------------------------------##<br>";
             //Check NodeType
             echo "<h2>---Check NodeType---</h2>";
