@@ -25,6 +25,7 @@ body {
 	$xpathProcessor = new DOMXPath($dom);
 	
 	//Xpath
+		
 		$xpathQueryString = "//div[@class='post-item-title']/a/text()";
 		$title_results = $xpathProcessor->query($xpathQueryString);
 		
@@ -39,7 +40,20 @@ body {
 
 		$xpathQueryString = "//div[@class='post-item-by']/div/@title";
 		$title_results3 = $xpathProcessor->query($xpathQueryString);
-
+		
+	//////////////ให้เขียน xpath results4//////////////
+            //$title_results4
+/*1)*/      
+			
+            //////////////---------------///////////////////
+            
+            //-------------------------------------------------------------//
+          
+            //////////////ให้เขียน xpath results5//////////////
+            //$title_results5
+/*2)*/		
+			
+			//////////////---------------///////////////////
 		
 	//print
             //echo "<br> #ofResult_length =".$title_results->length."<br>";
@@ -47,31 +61,31 @@ body {
 		//$count=$title_results->length;
 		for ($i=1 ;$i<=1;$i++ ){
             
-			//$titlelength
+		//$titlelength
 			$titlelength = $title_results->item($i-1)->nodeValue;
 			echo "<font color=\"993300\">กระทู้ที่ : $i<br>";
             
-            //$title_results
+        	//$title_results
             		$title1 = $title_results->item($i-1)->nodeValue;
             		echo "<font color=\"FF0000\">ชื่อกระทู้ = $title1<br>";
             
-            //$title_link_results
+        	//$title_link_results
 			$link = $title_link_results->item($i)->nodeValue;
 			echo "<font color=\"3366FF\">ลิงค์ = $link<br>";
 
-            //$title_results1
+        	//$title_results1
 			$post_by = $title_results1->item($i)->nodeValue;
 			echo "<font color=\"9400D3\">ชื่อผู้โพส = $post_by<br>";
             
-            //$title_results2
+        	//$title_results2
 			$time_stamp = $title_results2->item($i)->nodeValue;
 			echo "<font color=\"B22222\">เวลาที่โพส = $time_stamp<br>";
             
-            //$title_results3
+        	//$title_results3
 			$number_of_comments = $title_results3->item($i)->nodeValue;
 			echo "<font color=\"0099CC\">จำนวนความคิดเห็น = $number_of_comments<br>";
             
-            //////////////ให้เขียน Xpath results4//////////////
+            //////////////ให้เขียน print results4//////////////
             //$title_results4
 /*1)*/      
 			echo "<font color=\"006400\">จำนวน Like = $number_of_likes<br>";
@@ -79,7 +93,7 @@ body {
             
             //-------------------------------------------------------------//
           
-            //////////////ให้เขียน Xpath results5//////////////
+            //////////////ให้เขียน print results5//////////////
             //$title_results5
 /*2)*/		
 			echo "<font color=\"CC6600\">Tag ข้อมูล = $tags<br>";
