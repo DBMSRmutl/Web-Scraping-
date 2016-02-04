@@ -19,6 +19,7 @@ print('url ='+url)
 
 page = urllib2.urlopen(url).read()
 soup = BeautifulSoup(page, "html.parser")
-contentDiv = soup.find("div", {"id": "item_pantip-best_room"})
+#contentDiv = soup.find("div", {"id": "item_pantip-best_room"})
+contentDiv = soup.find("div", {"id": "item_pantip-best_room"}).getText()
 print(contentDiv)
 
